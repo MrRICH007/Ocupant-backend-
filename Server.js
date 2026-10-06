@@ -8,11 +8,11 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/api/health', (req, res) => res.json({ ok: true, service: 'ocupant-api' }));
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/houses', require('./routes/houses'));
-app.use('/api/subscription', require('./routes/subscription'));
-app.use('/api/payments', require('./routes/payments'));
-app.use('/api/roommates', require('./routes/roommates'));
+app.use('/api/auth', require('./auth'));
+app.use('/api/houses', require('./houses'));
+app.use('/api/subscription', require('./subscription'));
+app.use('/api/payments', require('./payments'));
+app.use('/api/roommates', require('./roommates'));
 
 // 404 for unknown API routes
 app.use('/api', (req, res) => res.status(404).json({ error: 'Not found' }));
