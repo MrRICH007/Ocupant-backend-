@@ -4,7 +4,7 @@
 // backup credit path. Never trust the redirect params alone.
 const express = require('express');
 const db = require('../db');
-const { requireAuth, requireAdmin } = require('../middleware/auth');
+const { requireAuth, requireAdmin } = require('../middleware/auth1');
 
 const router = express.Router();
 
